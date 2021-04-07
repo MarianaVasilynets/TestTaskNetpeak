@@ -8,9 +8,12 @@ actor: AcceptanceTester
 modules:
     enabled:
         - WebDriver:
-            url: https://netpeak.ua
             window_size: true
-            port: 9515
-            browser: chrome
         - \Helper\Acceptance
+        - Asserts
+    config:
+        WebDriver:
+            url: https://netpeak.ua
+            browser: 'chrome'
+            wait: 10
 step_decorators: ~
